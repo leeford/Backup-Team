@@ -2,6 +2,8 @@
 
 > **Disclaimer:** This tool is provided ‘as-is’ without any warranty or support. Use of this tool is at your own risk and I accept no responsibility for any damage caused.
 
+![](https://www.lee-ford.co.uk/images/backup-team/sample-backup-output.png)
+
 Backup-Team is a tool used to backup and recreate Teams from Microsoft Teams. A backup from the tool can include items such as settings, channels, tabs, owners, members, conversations and files.
 
 Teams can be recreated, including on a different tenant for a pseudo migration scenario.
@@ -50,15 +52,15 @@ If you would prefer to use your own, you can create an application that supports
 
 3. Copy the code from the console and enter it at https://microsoft.com/devicelogin and sign in to your Office 365 tenant. You may be asked to grant consent to the application
    
-   ![](/images/backup-team/device-code.png)
+   ![](https://www.lee-ford.co.uk/images/backup-team/device-code.png)
 
-   ![](/images/backup-team/enter-device-code.png)
+   ![](https://www.lee-ford.co.uk/images/backup-team/enter-device-code.png)
 
-   ![](/images/backup-team/sign-in-user.png)
+   ![](https://www.lee-ford.co.uk/images/backup-team/sign-in-user.png)
 
-   ![](/images/backup-team/consent-application.png)
+   ![](https://www.lee-ford.co.uk/images/backup-team/consent-application.png)
 4. Once signed in, search for a Team and select it for a backup
-    ![](/images/backup-team/sample-backup-output.png)
+    ![](https://www.lee-ford.co.uk/images/backup-team/sample-backup-output.png)
 
 > If you are **NOT** a member or owner of the Team you are backing up, you will prompted to become one (temporarily) to backup files and conversations. Only accept if you have the companies permission to read contents of the Team you are backing up.
 
@@ -93,14 +95,14 @@ To recreate a Team and change the UPN suffix (e.g. recreating a different tenant
 
 >It is recommended you extract the .zip file to a folder rather than open files within the .zip file
 
-![](/images/backup-team/sample-backup-zip.png)
+![](https://www.lee-ford.co.uk/images/backup-team/sample-backup-zip.png)
 
 Within a .zip file you will find the following:
 
 
 #### Report.htm ####
 Simple HTML report detailing backup of Team
-![](/images/backup-team/sample-report.png)
+![](https://www.lee-ford.co.uk/images/backup-team/sample-report.png)
 
 #### teamsConfig.json ####
 JSON file containing all Group/Team configuration
@@ -110,11 +112,11 @@ PowerShell transcript file detailing backup process
 
 #### Conversations ####
 Folder containing conversations for each channel within the Team. Each channel is provided in JSON format and a simple HTML page replicating the chat (with working attachment links)
-![](/images/backup-team/sample-conversation-report.png)
+![](https://www.lee-ford.co.uk/images/backup-team/sample-conversation-report.png)
 
 #### Files ####
 Folder containing all files from Team. File structure is maintained from Team
-![](/images/backup-team/sample-file-folder.png)
+![](https://www.lee-ford.co.uk/images/backup-team/sample-file-folder.png)
 
 ### Credits ###
 
