@@ -21,26 +21,26 @@
  
 .EXAMPLE 
     
-    To backup a Team
-    .\Backup-Team.ps1 -Action Backup -Path <folder to store backup>
+    To backup a Team:
+    Backup-Team.ps1 -Action Backup -Path <folder to store backup>
 
-    To backup all Teams
-    .\Backup-Team.ps1 -Action Backup -Path <folder to store backups> -All
+    To backup all Teams:
+    Backup-Team.ps1 -Action Backup -Path <folder to store backups> -All
 
-    To recreate a Team
-    .\Backup-Team.ps1 -Action Recreate -Path <path to backup file>
+    To recreate a Team:
+    Backup-Team.ps1 -Action Recreate -Path <path to backup file>
 
-    To recreate all Teams from backups in a folder
-    .\Backup-Team.ps1 -Action Recreate -Path <path to backups> -All
+    To recreate all Teams from backups in a folder:
+    Backup-Team.ps1 -Action Recreate -Path <path to backups> -All
 
-    To backup a Team and accept (yes) to all actions 
-    .\Backup-Team.ps1 -Action Backup -Path <folder to store backup> -YesToAll
+    To backup a Team and accept (yes) to all actions:
+    Backup-Team.ps1 -Action Backup -Path <folder to store backup> -YesToAll
 
-    To backup a Team and exclude files as part of backup
-    .\Backup-Team.ps1 -Action Backup -Path <folder to store backup> -ExcludeFiles
+    To backup a Team and exclude files as part of backup:
+    Backup-Team.ps1 -Action Backup -Path <folder to store backup> -ExcludeFiles
 
-    To recreate a Team and change the UPN suffix (e.g. recreating a different tenant with different UPN suffix)
-    .\Backup-Team.ps1 -Action Recreate -Path <path to backup file> -ChangeUPNSuffix <e.g. domain.com>
+    To recreate a Team and change the UPN suffix (e.g. recreating a different tenant with different UPN suffix):
+    Backup-Team.ps1 -Action Recreate -Path <path to backup file> -ChangeUPNSuffix <e.g. domain.com>
 
 #>
 
