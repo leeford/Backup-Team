@@ -1055,7 +1055,7 @@ function Recreate-Team {
                 # Change UPN Suffix Check
                 $userId = Get-UserId $_
 
-                Write-Host "    - Adding $($_.DisplayName)... " -NoNewlines
+                Write-Host "    - Adding $($_.DisplayName)... " -NoNewline
 
                 # Only add if not already an owner
                 if ($existingOwners.value.id -notcontains $userId) {
