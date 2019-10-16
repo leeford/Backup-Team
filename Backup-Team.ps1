@@ -1438,7 +1438,7 @@ if ($script:me.id) {
             # Recreate All Teams?
             if ($All) {
 
-                $backupFiles = Get-ChildItem -Path 'C:\temp\New folder\' | Where-Object { $_.Name -like "BACKUP_TEAM_*.zip" }
+                $backupFiles = Get-ChildItem -Path $path | Where-Object { $_.Name -like "BACKUP_TEAM_*.zip" }
 
                 $counter = 0
                 $fileCount = ($backupFiles).Count
