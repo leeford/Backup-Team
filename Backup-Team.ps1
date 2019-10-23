@@ -874,7 +874,7 @@ function Backup-Team {
         Create-HTMLPage -Content $html -PageTitle "$($chosenTeam.displayName) - Backup Report" -Path "$Path/_Backup_Team_Temp_/Report.htm"
 
         # Add Temp Backup Folder in to Zip
-        $BackupFile = "BACKUP_TEAM_$($chosenTeam.displayName)_$date.zip" -replace " ", "_"
+        $BackupFile = "BACKUP_TEAM_$($chosenTeam.displayName)_$date.zip" -replace '([\\/:*?"<>|\s])+', "_"
 
         Write-Host " - Adding files to zip file $BackupFile... " -ForegroundColor Yellow -NoNewline
 
