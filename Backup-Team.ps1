@@ -3,7 +3,7 @@
 .SYNOPSIS
  
     Backup-Team.ps1 - Backup and recreate a Team in Microsoft teams
-    https://www.lee-ford.co.uk/Backup-Team
+    https://www.lee-ford.co.uk/backup-team
  
 .DESCRIPTION
     Author: Lee Ford
@@ -92,7 +92,7 @@ function Invoke-GraphAPICall {
         # API Call
         $apiCall = try {
             
-            Invoke-RestMethod -Method $method -Uri $currentUri -ContentType "application/json" -Headers $Headers -Body $body -ResponseHeadersVariable script:responseHeaders
+            Invoke-RestMethod -Method $method -Uri $currentUri -ContentType "application/json; charset=UTF-8" -Headers $Headers -Body $body -ResponseHeadersVariable script:responseHeaders
 
         }
         catch {
