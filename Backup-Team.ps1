@@ -1100,6 +1100,32 @@ function Recreate-Team {
 
             }
 
+            # Previous Chats
+            if (Test-Path "$tempPath/Conversations") {
+
+                Write-Host " - Conversations directory found, uploading files..."
+
+                $chatfiles = Get-ChildItem -Recurse "$tempPath/Conversations/"
+
+                $forwardSlashed = $tempPath -replace "\\", "/"
+                $regex = [Regex]::Escape("$forwardSlashed/Conversations/")
+
+                $chatfiles | Where-Object { $_.name -like '*.htm' } | ForEach-Object {
+
+                    # Find the file name to base folderpath on
+                    $ChannelFolder = $_.name -replace ".htm", ""
+
+                    # Create destination path for file (based on current folder structure)
+                    $destinationPath = $_.FullName -replace "\\", "/"
+                    $destinationPath = $destinationPath -replace $regex, "/"
+                    $destinationPath = "/" + $ChannelFolder + "/Previous Conversations" + $destinationPath
+
+                    Invoke-FileUpload -filePath $_.FullName -destinationPath $destinationPath -teamId $newTeam.id
+
+                }
+
+            }
+
             # Remove 'me' as a owner as part of creation (if not originally part of Team)
             if ($config.owners.value.id -notcontains $script:me.id) {
 
