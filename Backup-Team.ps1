@@ -1382,8 +1382,8 @@ function Create-HTMLPage {
     </div>"
 
     try {
-            
-        ConvertTo-Html -CssUri "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -Body $html -Title $PageTitle | Out-File $Path
+
+        ConvertTo-Html -CssUri "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -Body $html -Title $PageTitle -Charset "UTF-8" | Out-File $Path
         Write-Host "SUCCESS" -ForegroundColor Green
 
     }
